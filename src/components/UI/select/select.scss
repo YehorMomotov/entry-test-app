@@ -1,0 +1,39 @@
+.select {
+  z-index: 2;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-left: 10px;
+    height: 1px;
+    width: 1px;
+    padding: 2px;
+    transform: rotate(var(--angle));
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+  &__options {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: max-content;
+    width: 115px;
+    top: 100%;
+    left: -20px;
+  }
+  &__option {
+    padding: 8px 20px;
+    &:hover {
+      background-color: #eeeeee;
+    }
+  }
+}

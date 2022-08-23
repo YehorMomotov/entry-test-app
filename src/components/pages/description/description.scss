@@ -1,0 +1,87 @@
+.description {
+  display: flex;
+  gap: 100px;
+  &__images-div {
+    display: flex;
+    gap: 40px;
+    min-width: max-content;
+  }
+  &__additional-images {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: min-content;
+    max-height: 500px;
+    overflow-y: auto;
+
+    img {
+      cursor: pointer;
+      max-width: 80px;
+    }
+  }
+  &__main-image {
+    img {
+      max-height: 500px;
+    }
+  }
+  &__content {
+    width: 300px;
+    h1 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 27px;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 27px;
+      text-transform: capitalize;
+    }
+    button {
+      text-transform: uppercase;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 13px 0;
+      width: 100%;
+      background: #5ece7b;
+      border: none;
+      display: block;
+      margin-bottom: 40px;
+    }
+    span {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 159.96%;
+    }
+  }
+  &__price-text {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  &__price-count {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+  }
+  &__out-of-stock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    h1 {
+      font-weight: 700;
+      font-size: 36px;
+    }
+  }
+}

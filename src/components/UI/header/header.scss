@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  width: calc(100% - (2 * 101px));
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 101px;
+  padding-bottom: 0;
+  &__categories,
+  &__logo,
+  &__cart-and-currency {
+    flex-basis: 33.33%;
+    margin-bottom: auto;
+  }
+  &__categories {
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    justify-content: flex-start;
+    a {
+      text-decoration: none;
+      padding: 0 16px;
+      padding-bottom: 24px;
+      text-align: center;
+      text-transform: uppercase;
+      color: inherit;
+      &:visited {
+        color: inherit;
+      }
+    }
+    .category-active {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #5ece7b;
+      border-bottom: 2px solid #5ece7b;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .semi-transparent {
+      filter: opacity(50%);
+    }
+  }
+  &__cart-and-currency {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

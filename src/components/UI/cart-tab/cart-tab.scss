@@ -1,0 +1,112 @@
+.cart-tab {
+  &__cart-image {
+    position: relative;
+    cursor: pointer;
+
+    img {
+      height: 20px;
+    }
+  }
+  &__quantity-tag {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    span {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+  &__overlay {
+    background: rgba(57, 55, 72, 0.22);
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 69px;
+    left: 0px;
+  }
+  &__content {
+    padding: 16px;
+    position: absolute;
+    top: 0px;
+    right: 72px;
+    background-color: white;
+    width: max-content;
+    .items-list {
+      &__header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        h2 {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 160%;
+        }
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 160%;
+        }
+      }
+      &__items {
+        display: flex;
+        flex-direction: column;
+        overflow-y: var(--scroll);
+        gap: 40px;
+        height: var(--height);
+      }
+      &__controls {
+        display: flex;
+        justify-content: space-between;
+        button,
+        a {
+          padding: 13px 36px;
+          text-decoration: none;
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 120%;
+          text-align: center;
+          text-transform: uppercase;
+          &:visited {
+            color: inherit;
+          }
+        }
+        :first-child {
+          border: 1px solid black;
+          background-color: white;
+          margin-right: 12px;
+        }
+        :last-child {
+          background-color: #5ece7b;
+          border: 1px solid #5ece7b;
+          color: white;
+        }
+      }
+      &__total {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.focus {
+  display: none;
+}

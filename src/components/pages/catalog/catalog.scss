@@ -1,0 +1,128 @@
+.catalog {
+  &__heading {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 160%;
+    text-align: start;
+    margin: 0;
+  }
+  .items-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 4%;
+    list-style-type: none;
+
+    &__link {
+      cursor: pointer;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 15px;
+      bottom: 0%;
+      transform: translateY(50%);
+      padding: 16px;
+      border: none;
+      background-color: #5ece7b;
+      border-radius: 50%;
+      img {
+        filter: brightness(400%);
+      }
+    }
+    &__favorite {
+      cursor: pointer;
+      display: none;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 20px;
+      height: 20px;
+    }
+    &__discount {
+      display: none;
+      position: absolute;
+      padding: 8px 16px;
+      top: 8px;
+      left: 0px;
+      div {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        p {
+          color: white;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 160%;
+        }
+      }
+      background-color: #5ece7b;
+    }
+    &__controls {
+      display: flex;
+      position: relative;
+      img {
+        max-height: 350px;
+        max-width: 350px;
+      }
+    }
+    &__item {
+      display: flex;
+      padding: 16px;
+      margin-bottom: 103px;
+      flex-direction: column;
+
+      &:hover {
+        box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+        div {
+          a {
+            display: flex;
+          }
+        }
+      }
+
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin-top: 24px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 160%;
+        align-self: stretch;
+        text-transform: capitalize;
+      }
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+      }
+    }
+    .out-of-stock {
+      .items-list__controls {
+        &::after {
+          content: "OUT OF STOCK";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 160%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          inset: 0;
+          color: #8d8f9a;
+          background: #ffffff7c;
+        }
+      }
+      h1,
+      p {
+        color: #8d8f9a;
+      }
+    }
+  }
+}
