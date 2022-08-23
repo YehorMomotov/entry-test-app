@@ -32,7 +32,9 @@ class Catalog extends React.Component {
     );
     return (
       <main className="catalog">
-        <h1 className="catalog__heading">Category name</h1>
+        <h1 className="catalog__heading">
+          {searchParams.get("category" || this.state.defaultCategory)}
+        </h1>
         <ul className="items-list">
           <Query
             query={GetProducts}
